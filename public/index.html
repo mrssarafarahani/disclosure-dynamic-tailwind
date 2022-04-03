@@ -1,0 +1,34 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/output.css">
+    <title>accordion- menu</title>
+</head>
+
+<body class="bg-blue-600 flex  justify-center items-center h-screen">
+    <div class="max-w-md bg-white w-full rounded-lg overflow-hidden p-4 flex flex-col gap-y-2">
+        <!-- accordion-1 -->
+        <div x-data=" { tabOne:false}">
+
+            <div @click="tabOne =!tabOne" class="flex items-center justify-between p-2 rounded-md text-white bg-blue-500 cursor-pointer"><span>what is your refund policy?</span>
+                <span :class=" tabOne? 'rotate-180' : ''" class="transition-all duration-700"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M4.293 15.707a1 1 0 010-1.414l5-5a1 1 0 011.414 0l5 5a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414 0zm0-6a1 1 0 010-1.414l5-5a1 1 0 011.414 0l5 5a1 1 0 01-1.414 1.414L10 5.414 5.707 9.707a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                  </svg></span></div>
+            <div x-show="tabOne" class="p-2 text-xs">If you're unhappy with your purchase for any reason, email us within 90 days and we'll refund you in full, no questions asked</div>
+        </div>
+        <!-- accodion-2 -->
+        <div x-data="{tabTwo:false}">
+            <div @click="tabTwo=!tabTwo" class="flex items-center justify-between p-2 rounded-md text-white bg-blue-500 cursor-pointer"><span>do you offer technical support?</span>
+                <span :class="tabTwo ? 'rotate-180' : ''" class="transition-all duration-300"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M4.293 15.707a1 1 0 010-1.414l5-5a1 1 0 011.414 0l5 5a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414 0zm0-6a1 1 0 010-1.414l5-5a1 1 0 011.414 0l5 5a1 1 0 01-1.414 1.414L10 5.414 5.707 9.707a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                  </svg></span></div>
+            <div x-show="tabTwo" class="p-2 text-xs "> No.</div>
+        </div>
+    </div>
+    <script src="//unpkg.com/alpinejs" defer></script>
+</body>
+
+</html>
